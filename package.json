@@ -1,0 +1,25 @@
+{
+  "name": "@eix/input",
+  "version": "1.0.0",
+  "description": "Input handling system for the eix game engine.",
+  "main": "dist/main",
+  "scripts": {
+    "build": "tsc",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/eix-js/input.git"
+  },
+  "author": "neverix",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/eix-js/input/issues"
+  },
+  "homepage": "https://github.com/eix-js/input#readme",
+  "devDependencies": {
+    "@types/node": "^11.13.7",
+    "node-ts": "^5.0.1",
+    "typescript": "^3.4.4"
+  }
+}
