@@ -5,7 +5,7 @@
   "main": "dist/main",
   "scripts": {
     "build": "tsc",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "mocha"
   },
   "repository": {
     "type": "git",
@@ -18,8 +18,14 @@
   },
   "homepage": "https://github.com/eix-js/input#readme",
   "devDependencies": {
+    "@types/chai": "^4.1.7",
+    "@types/mocha": "^5.2.6",
     "@types/node": "^11.13.7",
+    "chai": "^4.2.0",
+    "mocha": "^6.1.4",
     "node-ts": "^5.0.1",
+    "source-map-support": "^0.5.12",
+    "ts-node": "^8.1.0",
     "typescript": "^3.4.4"
   },
   "dependencies": {
