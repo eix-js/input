@@ -1,1 +1,1 @@
-export { KeyboardEvent } from "./keyboard/KeyboardEvent"
+export { KeyboardInput } from "./keyboard/KeyboardInput"

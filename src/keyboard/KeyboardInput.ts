@@ -1,7 +1,7 @@
 import { fromEvent, Subject, Subscription } from "rxjs"
 import * as keycode from "keycode"
 
-export class KeyboardEvent {
+export class KeyboardInput {
     /**
      * boolean showing the state of the event
      */
@@ -40,16 +40,14 @@ export class KeyboardEvent {
         this.subscription.push(
             fromEvent(document, "keydown")
                 .subscribe((e) => {
-
                     //remember the length of the pressed array 
                     //used to see if anything changed
                     const last = this.pressed.length
-
                     //iterate over the keys it listens to
                     for (let i of this.keys)
                         //if the key is pressed and it isnt already pressed,
                         //then add it to the pressed array
-                        if (i == keycode(e) && this.pressed.indexOf(i) == -1)
+                        if (i.charCodeAt(0) == keycode(e).charCodeAt(0) && this.pressed.indexOf(i) == -1)
                             this.pressed.push(i)
 
                     //if there was no key pressd before, and now there is
