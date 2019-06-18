@@ -3,6 +3,11 @@ import * as keycode from "keycode"
 
 export class KeyboardInput {
     /**
+     * Specifies if e.preventDefault and e.stopPropagation should be called.
+     */
+    preventDefaults = true
+
+    /**
      * boolean showing the state of the event
      */
     value = false
@@ -55,6 +60,12 @@ export class KeyboardInput {
                     if (last == 0 && this.pressed.length != 0) {
                         this.value = true
                         this.valueChanges.next(this.value)
+                    }
+
+                    //prevent defaults
+                    if (this.preventDefaults){
+                        e.preventDefault()
+                        e.stopPropagation()
                     }
                 })
         )
